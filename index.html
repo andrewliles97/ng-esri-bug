@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ngmaptest</title>
+  <base href="/ng-esri-bug/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://js.arcgis.com/3.21/esri/css/esri.css">
+  <script src="https://js.arcgis.com/3.21/"></script>
+  <style>
+      html, body, #map {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+  </style>
+  <script>
+      var map;
+
+      require(["esri/map", "dojo/domReady!"], function(Map) {
+        map = new Map("map", {
+          basemap: "topo",  //For full list of pre-defined basemaps, navigate to http://arcg.is/1JVo6Wd
+          center: [-122.45, 37.75], // longitude, latitude
+          zoom: 13
+        });
+      });
+    </script>
+</head>
+<body>
+  <div id="map"></div>
+  <app-root></app-root>
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+</html>
